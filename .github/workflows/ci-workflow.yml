@@ -48,7 +48,7 @@ jobs:
       - name: Upload output file
         uses: actions/upload-artifact@v4
         with:
-          name: output-log-file
+          name: output-log-file-${{ runner.os }}-${{ matrix.node-version }}-${{ github.run_id }}
           path: output.log
       
 
@@ -67,7 +67,7 @@ jobs:
       - name: Download a single artifact
         uses: actions/download-artifact@v4
         with:
-          name: output-log-file
+          name: output-log-file-Windows-16-${{ github.run_id }}
       
 
       # Placeholder - this step would be some action or run commands that deploys the code
