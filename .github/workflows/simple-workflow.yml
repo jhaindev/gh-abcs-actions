@@ -42,7 +42,7 @@ jobs:
           node -v
       - name: Hello world action step
         id: hello
-        uses: cody-test-org/hello-world-javascript-action@v1.1
+        uses: cody-test-org/hello-world-javascript-action@v1.2
         with:
             who-to-greet: 'Cody'
   
