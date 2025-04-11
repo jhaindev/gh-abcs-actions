@@ -23,8 +23,8 @@ jobs:
       fail-fast: true
       matrix:
         # our matrix for testing across node versions and OSs
-        node-version: [12, 14, 16]
-        os: [macos-latest, windows-latest, ubuntu-latest]
+        node-version: [14, 16]
+        os: [windows-latest, ubuntu-latest]
     
     steps:
       - name: Checkout
