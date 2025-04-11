@@ -19,7 +19,7 @@ jobs:
 
   say_hello_windows:
     name: Say Hello from Windows Self-Hosted Runner
-    runs-on: [self-hosted, windows, x64, self-hosted-windows, lab-runner]
+    runs-on: [self-hosted, Windows, x64, self-hosted-windows, lab-runner]
     steps:
       - name: Say hello from self-hosted windows runner
         run: |
