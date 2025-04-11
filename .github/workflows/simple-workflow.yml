@@ -40,6 +40,11 @@ jobs:
       - name: Run node.js version
         run: |
           node -v
+      - name: Hello world action step
+        id: hello
+        uses: cody-test-org/hello-world-javascript-action@v1.1
+        with:
+            who-to-greet: 'Cody'
   
   # Running jobs in a container - Use a container to run the steps in a job.
   container:
