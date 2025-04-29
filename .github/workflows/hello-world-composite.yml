@@ -11,7 +11,7 @@ jobs:
     name: A job1 to say hello
     steps:
       - id: hello-world
-        uses: cody-test-org/hello-world-composite-action@main
+        uses: cody-test-org/hello-world-javascript-action@main
         with:
           who-to-greet: 'Hello from GH ABCs'
       - run: echo random-number ${{ steps.hello-world.outputs.random-number }}
