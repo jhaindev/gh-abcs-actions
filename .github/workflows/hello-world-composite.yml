@@ -4,6 +4,12 @@ on:
   pull_request:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      who_to_greet:
+        description: "Who we are greeting"
+        required: true
+        default: "Cody Carlson"
+        type: string
 
 jobs:
   hello_world_job1:
@@ -13,7 +19,7 @@ jobs:
       - id: hello-world
         uses: cody-test-org/hello-world-javascript-action@main
         with:
-          who-to-greet: 'Hello from GH ABCs'
+          who-to-greet: ${{ inputs.who_to_greet }}
       - run: echo random-number ${{ steps.hello-world.outputs.random-number }}
         shell: bash
         
